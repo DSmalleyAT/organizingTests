@@ -12,6 +12,13 @@ class SecurePage extends Page {
     get flashAlert() {
         return $('#flash');
     }
+    get btnLogout() {
+        return $('a.button');
+    }
+    async logout() {
+        await this.btnLogout.click();
+    }
 }
 
 module.exports = new SecurePage();
+
